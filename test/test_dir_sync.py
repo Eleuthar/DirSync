@@ -53,9 +53,9 @@ class DirSyncTestCase(unittest.TestCase):
     
     @classmethod
     def setUpClass(cls) -> None:
-        # desynchronized test folders
-        # if Path.exists(Path("./destination")):
-        #     rmtree("./destination")
+        # clear previous test folders if tearDown was passed
+        if Path.exists(Path("./destination")):
+            rmtree("./destination")
         if not Path.exists(Path("./destination")):
             copytree(Path("./test folders/destination"), Path("./destination"))
 

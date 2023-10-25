@@ -27,8 +27,7 @@ class DirSync:
     """
     DirSync(source, destination, log directory)
 
-    Synchronize a destination directory with a source directory every 'x' seconds|minutes|hours|days
-     while the program runs in the background.
+    Synchronize a destination directory with a source directory every 'x' seconds|minutes|hours|days while the program runs in the background.
     """
 
     def __init__(
