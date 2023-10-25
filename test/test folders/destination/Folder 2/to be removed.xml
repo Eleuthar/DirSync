@@ -1,0 +1,26 @@
+from hashlib import md5
+from sys import argv
+from of"UPDATED { fpath_on_cloud }\n" )
+					continue
+				except Exception as X:
+					log_it( logger,  f"Error: { X }\n" )			
+			# same filename but diff root > RENAME
+			elif not path.exists( expected_path_on_client ) and dst_fn in client_hexmap['fname']:
+				rename_it( logger, dst_root, fpath_on_cloud )				
+			# no path match > DELETE
+			else:
+				try:
+					remove( fpath_on_cloud )
+				except Exception as X:
+					log_it( logger, f"DELETED {fpath_on_cloud}\n")
+		if dst_root not in client_hexmap[ 'root' ]:
+			dir_to_rm.add( dst_root )
+	return dir_to_rm 
+    
+'''    
+for q in range( len(client_hexmap['hex']) ):
+    print(client_hexmap['hex'][q])
+    print(client_hexmap['fname'][q])
+    print(client_hexmap['root'][q])
+    print('-------------------------')
+'''
